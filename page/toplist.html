@@ -6,19 +6,94 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Team</title>
   <link rel="stylesheet" href="../css/style.css">
-
-
-  <i class="fa-solid fa-music"></i>
-
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #1e1e2f;
+            color: #fff;
+        }
+        header {
+            background-color: #2c2c54;
+            color: #ecf0f1;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 5px 0 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #2e2e44;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1 {
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #ecf0f1;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #4e4e69;
+            padding-bottom: 15px;
+        }
+        img {
+            width: 60px;
+            height: 60px;
+            border-radius: 8px;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .song-info {
+            flex-grow: 1;
+        }
+        .song-info h3 {
+            margin: 0;
+            font-size: 1.4em;
+            color: #ecf0f1;
+        }
+        .song-info p {
+            margin: 5px 0 0;
+            color: #b2bec3;
+        }
+        .play-btn {
+            padding: 10px 20px;
+            background: #7158e2;
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.3s;
+        }
+        .play-btn:hover {
+            background: #3b3b98;
+            transform: scale(1.05);
+        }
+        .song-index {
+            font-size: 1.5em;
+            color: #ecf0f1;
+            margin-right: 20px;
+        }
+    </style>
+</head>
 <body>
-  <div class="header">
-    <img src="youtube-logo.png" alt="YouTube Logo">
-    <div class="search-bar">
-      <input type="text" placeholder="Tìm kiếm">
-      <button>Tìm kiếm</button>
-    </div>
-  </div>
-
   <div class="sidebar">
     <ul>
       <li> <a href="../page/home.html"> Trang chủ</a> </li>
@@ -28,81 +103,50 @@
       <li> <a href ="../page/login.html">Đăng nhập </a></li>
   </ul>
   </div>
+    <header>
+        <h1>Top Music</h1>
+        <p>Your favorite hits, all in one place</p>
+    </header>
 
-  <div class="content">
-    <div class="video">
-      <a href="https://youtu.be/aocSFqtnzMk">
-        <img
-          src="https://i.ytimg.com/vi/aocSFqtnzMk/hqdefault.jpg?sqp=-oaymwEyCNACELwBSFryq4qpAyQIARUAAIhCGAHwAQH4Af4JgALQBYoCDQgAEAEYjAEgUigVMA8=&rs=AOn4CLDg6P851pbr8825rQl4LqvzO2krlA"
-          alt="Video 1">
-      </a>
-      <div class="details">
-        <h3>LƯỚT TRÊN CON SÓNG - Dangrangto rủ Trần Lả Lướt kill con beat disco | Rap Việt 2024 [Performance]</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/Z3UN7pG02NQ">
-        <img
-          src="https://i.ytimg.com/vi/Z3UN7pG02NQ/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD6nh6pi1LZ3n7p5JPiSjkdvku8hQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>Thằng Điên, 2AM, Vì Anh Đâu Có Biết, Lạ Lùng - Nhạc Ballad Việt Nhẹ Nhàng Gây Nghiện</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/pOoJ1eQbxug">
-        <img
-          src="https://i.ytimg.com/vi/pOoJ1eQbxug/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCMBLxqR9be6jkoqMQkjLxHyHZZ4w"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>CHỊU CÁCH MÌNH NÓI THUA ( PIANO COVER ) | RHYDER ft. BAN x COOLKID | HOÀNG GREEN | PIANO VERSION</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/g2itspUa8rM">
-        <img
-          src="https://i.ytimg.com/vi/g2itspUa8rM/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD0QvoZd_dcPlSOyCqzpoJHoM0mRQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>Em quay đi ta mất nhau.. Wrong Times, Đừng Xa Anh Nhé, Bingo | Playlist GenZ CHILL tâm trạng</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/xypzmu5mMPY">
-        <img
-          src="https://i.ytimg.com/vi/xypzmu5mMPY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA9OHY7xqIKzlDOOw5k0iXdeRu6yQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>SƠN TÙNG M-TP | MUỘN RỒI MÀ SAO CÒN | OFFICIAL MUSIC VIDEO</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/jk7LbXUpmz0">
-        <img
-          src="https://i.ytimg.com/vi/jk7LbXUpmz0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDsVRrT50wxMSTViWIMACugXqR0fg"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>STREAM ĐẾN BAO GIỜ - ĐỘ MIXI ft. BẠN SÁNG TÁC | OFFICIAL MUSIC VIDEO</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/Jk38OqdAQxc">
-        <img
-          src="https://i.ytimg.com/vi/Jk38OqdAQxc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBjqnrn_uBjp4vKoHQHWYKmbzn0bQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>ĐỘ TỘC 2 | FROM MIXI WITH LOVE - MASEW x PHÚC DU x PHÁO x ĐỘ MIXI [OFFICIAL MV LYRIC]</h3>
-      </div>
+    <div class="container">
+        <ul id="song-list">
+            <!-- Song items will be injected here by JavaScript -->
+        </ul>
     </div>
 
+    <script>
+        const songs = [
+            { title: "Tái Sinh", artist: "Tùng Dương", thumbnail: "https://i.ytimg.com/vi/aocSFqtnzMk/hqdefault.jpg?sqp=-oaymwEyCNACELwBSFryq4qpAyQIARUAAIhCGAHwAQH4Af4JgALQBYoCDQgAEAEYjAEgUigVMA8=&rs=AOn4CLDg6P851pbr8825rQl4LqvzO2krlA" },
+            { title: "Mất Kết Nối", artist: "Dương Domic", thumbnail: "https://via.placeholder.com/60" },
+            { title: "Cảm Ơn Em", artist: "Đặng Thiên Chí", thumbnail: "https://via.placeholder.com/60" },
+            { title: "Anh Đau Từ Lúc Em Đi", artist: "Trần Mạnh Cường", thumbnail: "https://via.placeholder.com/60" },
+            { title: "Giờ Thì", artist: "Buitruonglinh", thumbnail: "https://via.placeholder.com/60" },
+            { title: "Hận đời ", artist: "Phạm Chí Đức ", thumbnail: "https://via.placeholder.com00/60" },
+            { title: "Địt mẹ thầy giáo", artist: "Quoách Đăng Công", thumbnail: "https://via.placeholder.com/60" }
 
-  </div>
+        ];
+
+        const songList = document.getElementById('song-list');
+
+        songs.forEach((song, index) => {
+            const li = document.createElement('li');
+
+            li.innerHTML = `
+                <span class="song-index">${index + 1}</span>
+                <img src="${song.thumbnail}" alt="Song Thumbnail">
+                <div class="song-info">
+                    <h3>${song.title}</h3>
+                    <p>${song.artist}</p>
+                </div>
+                <button class="play-btn" onclick="playSong('${song.title}')">Play</button>
+            `;
+
+            songList.appendChild(li);
+        });
+
+        function playSong(title) {
+            alert(`Now playing: ${title}`);
+        }
+    </script>
 </body>
-
 </html>
