@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -86,14 +85,10 @@
             padding: 10px 15px;
             border-radius: 8px;
             cursor: pointer;
-<<<<<<< HEAD
             font-size: 14px;
             font-weight: bold;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
-=======
-            transition: transform 0.2s, ;
->>>>>>> 6340b735c5fe7e4667f0b914375847b39f9d2cac
         }
 
         .play-btn:hover {
@@ -124,12 +119,9 @@
 
         /* Hiệu ứng động */
         @keyframes glow {
-
-            0%,
-            100% {
+            0%, 100% {
                 box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
             }
-
             50% {
                 box-shadow: 0 0 20px rgba(255, 255, 255, 1);
             }
@@ -140,99 +132,87 @@
         }
     </style>
 </head>
-
 <body>
 
-    <header>
-        🌟 Top Music 🌟
-    </header>
-    <div class="sidebar">
-        <ul>
-            <li> <a href="../page/home.html"> Trang chủ</a> </li>
-            <li><a href="../page/topnhac.html">Top Nhạc</a></li>
-            <li> <a href="../page/casi.html">Ca sĩ</a></li>
-            <li> <a href="../page/toplist.html">Top List</a> </li>
-            <li> <a href="../page/login.html">Đăng nhập </a></li>
-        </ul>
-    </div>
-    <div class="container">
-        <ul class="music-list" id="musicList">
-            <!-- Danh sách bài hát sẽ được thêm bằng JS -->
-        </ul>
-    </div>
+<header>
+    🌟 Top Music  🌟
+</header>
+<div class="sidebar">
+    <ul>
+      <li> <a href="../page/home.html"> Trang chủ</a> </li>
+      <li><a href="../page/topnhac.html">Top Nhạc</a></li>
+      <li> <a href="../page/casi.html">Ca sĩ</a></li>
+      <li> <a href="../page/toplist.html">Top List</a> </li>
+      <li> <a href ="../page/login.html">Đăng nhập </a></li>
+  </ul>
+  </div>
+<div class="container">
+    <ul class="music-list" id="musicList">
+        <!-- Danh sách bài hát sẽ được thêm bằng JS -->
+    </ul>
+</div>
 
-    <div class="audio-player" id="audioPlayer" style="display: none;">
-        <audio controls id="audio"></audio>
-    </div>
+<div class="audio-player" id="audioPlayer" style="display: none;">
+    <audio controls id="audio"></audio>
+</div>
 
-    <script>
-<<<<<<< HEAD
-        const musicData = [
-            {
-                title: "Hãy Trao Cho Anh",
-                artist: "Sơn Tùng M-TP",
-                album: "Hãy Trao Cho Anh",
-                thumbnail: "https://nld.mediacdn.vn/2019/7/2/635k-view-premiere-15620590708781264015848.jpg",
-                src: " "
-            },
-            {
-                title: "Nàng Thơ",
-                artist: "Hoàng Dũng",
-                album: "Nàng Thơ",
-                thumbnail: "https://i.scdn.co/image/ab67616d0000b273c8e1db773a282546b2a57fd9",
-                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
-            },
-            {
-                title: "Em Của Ngày Hôm Qua",
-                artist: "Sơn Tùng M-TP",
-                album: "Em Của Ngày Hôm Qua",
-                thumbnail: "https://i.ytimg.com/vi/kebCY6ahbHQ/sddefault.jpg",
-                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-            },
-            {
-                title: "Quân Tử ý",
-                artist: "Lê Bảo Bình ",
-                album: "Quân Tử Ý ",
-                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIGUaC_nW85t3i0kVvxokadK3kDEqp7x9Ug&s",
-                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-            },
-            {
-                title: "Tết Nhà Mình  ",
-                artist: "Hòa Minzy",
-                album: "Tết Nhà MÌnh",
-                thumbnail: "https://thanhnien.mediacdn.vn/uploaded/caotung/2021_01_26/img_6827_WVZY.jpg?width=500",
-                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-            },
-            {
-                title: "E Là Không Thể ",
-                artist: "Anh Quân Idol", album: "E Là Không Thể",
-                thumbnail: "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/6/6/f/c/66fcec5071712b11f5040fa6bb4f64bb.jpg",
-                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
-            }
-            // Thêm các bài hát khác ở đây
-=======
-        const songs = [
-            { title: "Tái Sinh", artist: "Tùng Dương", thumbnail: "https://i.ytimg.com/vi/aocSFqtnzMk/hqdefault.jpg?sqp=-oaymwEyCNACELwBSFryq4qpAyQIARUAAIhCGAHwAQH4Af4JgALQBYoCDQgAEAEYjAEgUigVMA8=&rs=AOn4CLDg6P851pbr8825rQl4LqvzO2krlA" },
-            { title: "Mất Kết Nối", artist: "Dương Domic", thumbnail: "https://via.placeholder.com/60" },
-            { title: "Cảm Ơn Em", artist: "Đặng Thiên Chí", thumbnail: "https://via.placeholder.com/60" },
-            { title: "Anh Đau Từ Lúc Em Đi", artist: "Trần Mạnh Cường", thumbnail: "https://via.placeholder.com/60" },
-            { title: "Giờ Thì", artist: "Buitruonglinh", thumbnail: "https://via.placeholder.com/60" },
-            { title: "Hận đời ", artist: "Phạm Chí Đức ", thumbnail: "https://via.placeholder.com00/60" },
-            { title: "duyt moe thang duc", artist: "to Công", thumbnail: "https://via.placeholder.com/60" }
+<script>
+    const musicData = [
+        {
+            title: "Hãy Trao Cho Anh",
+            artist: "Sơn Tùng M-TP",
+            album: "Hãy Trao Cho Anh",
+            thumbnail: "https://nld.mediacdn.vn/2019/7/2/635k-view-premiere-15620590708781264015848.jpg",
+            src: " "
+        },
+        {
+            title: "Nàng Thơ",
+            artist: "Hoàng Dũng",
+            album: "Nàng Thơ",
+            thumbnail: "https://i.scdn.co/image/ab67616d0000b273c8e1db773a282546b2a57fd9",
+            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+        },
+        {
+            title: "Em Của Ngày Hôm Qua",
+            artist: "Sơn Tùng M-TP",
+            album: "Em Của Ngày Hôm Qua",
+            thumbnail: "https://i.ytimg.com/vi/kebCY6ahbHQ/sddefault.jpg",
+            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        },
+        {
+            title: "Quân Tử ý",
+            artist: "Lê Bảo Bình ",
+            album: "Quân Tử Ý ",
+            thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIGUaC_nW85t3i0kVvxokadK3kDEqp7x9Ug&s",
+            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        },
+        {
+            title: "Tết Nhà Mình  ",
+            artist: "Hòa Minzy",
+            album: "Tết Nhà MÌnh",
+            thumbnail: "https://thanhnien.mediacdn.vn/uploaded/caotung/2021_01_26/img_6827_WVZY.jpg?width=500",
+            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        },
+        {
+            title: "E Là Không Thể ",
+            artist: "Anh Quân Idol",
+            album: "E Là Không Thể",
+            thumbnail: "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/6/6/f/c/66fcec5071712b11f5040fa6bb4f64bb.jpg",
+            src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+        }
+        // Thêm các bài hát khác ở đây
+    ];
 
->>>>>>> 6340b735c5fe7e4667f0b914375847b39f9d2cac
-        ];
+    const musicList = document.getElementById("musicList");
+    const audioPlayer = document.getElementById("audioPlayer");
+    const audio = document.getElementById("audio");
 
-        const musicList = document.getElementById("musicList");
-        const audioPlayer = document.getElementById("audioPlayer");
-        const audio = document.getElementById("audio");
+    function loadMusicList() {
+        musicData.forEach((song, index) => {
+            const listItem = document.createElement("li");
+            listItem.className = "music-item";
 
-        function loadMusicList() {
-            musicData.forEach((song, index) => {
-                const listItem = document.createElement("li");
-                listItem.className = "music-item";
-
-                listItem.innerHTML = `
+            listItem.innerHTML = `
                 <div class="music-info">
                     <img src="${song.thumbnail}" alt="${song.title}">
                     <div class="music-details">
@@ -243,20 +223,19 @@
                 </div>
                 <button class="play-btn" onclick="playMusic(${index})">Play</button>
             `;
-                musicList.appendChild(listItem);
-            });
-        }
+            musicList.appendChild(listItem);
+        });
+    }
 
-        function playMusic(index) {
-            const song = musicData[index];
-            audio.src = song.src;
-            audioPlayer.style.display = "flex";
-            audio.play();
-        }
+    function playMusic(index) {
+        const song = musicData[index];
+        audio.src = song.src;
+        audioPlayer.style.display = "flex";
+        audio.play();
+    }
 
-        loadMusicList();
-    </script>
+    loadMusicList();
+</script>
 
 </body>
-
 </html>
