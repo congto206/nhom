@@ -1,122 +1,216 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Team</title>
-  <link rel="stylesheet" href="../css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>My Team</title>
     <style>
+        /* Reset cơ bản */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background: #1e1e2f;
+            font-family: 'Poppins', Arial, sans-serif;
+            background: linear-gradient(135deg, #2b1055, #7597de);
             color: #fff;
+            overflow-x: hidden;
         }
+
         header {
-            background-color: #2c2c54;
-            color: #ecf0f1;
+            background: linear-gradient(90deg, #6a00ff, #ff0077);
+            color: #fff;
             padding: 20px;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        header p {
-            font-size: 1.2em;
-            margin: 5px 0 0;
-        }
+
         .container {
             max-width: 900px;
             margin: 30px auto;
-            background: #2e2e44;
-            padding: 20px;
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
         }
-        h1 {
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #ecf0f1;
-        }
-        ul {
+
+        .music-list {
             list-style: none;
             padding: 0;
+            margin: 0;
         }
-        li {
+
+        .music-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .music-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.02);
+        }
+
+        .music-info {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #4e4e69;
-            padding-bottom: 15px;
         }
-        img {
+
+        .music-info img {
             width: 60px;
             height: 60px;
-            border-radius: 8px;
-            margin-right: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            margin-right: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         }
-        .song-info {
-            flex-grow: 1;
+
+        .music-details span {
+            display: block;
+            font-size: 16px;
+            color: #f0f0f0;
         }
-        .song-info h3 {
-            margin: 0;
-            font-size: 1.4em;
-            color: #ecf0f1;
+
+        .music-details span:first-child {
+            font-weight: bold;
+            font-size: 18px;
         }
-        .song-info p {
-            margin: 5px 0 0;
-            color: #b2bec3;
-        }
+
         .play-btn {
-            padding: 10px 20px;
-            background: #7158e2;
+            background: linear-gradient(90deg, #ff0077, #6a00ff);
             color: #fff;
             border: none;
+            padding: 10px 15px;
             border-radius: 8px;
-            font-size: 1em;
             cursor: pointer;
+<<<<<<< HEAD
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+=======
             transition: transform 0.2s, ;
+>>>>>>> 6340b735c5fe7e4667f0b914375847b39f9d2cac
         }
+
         .play-btn:hover {
-            background: #3b3b98;
-            transform: scale(1.05);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
-        .song-index {
-            font-size: 1.5em;
-            color: #ecf0f1;
-            margin-right: 20px;
+
+        .audio-player {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(90deg, #6a00ff, #ff0077);
+            color: #fff;
+            border-radius: 0 0 15px 15px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            bottom: 0;
+            z-index: 10;
+        }
+
+        .audio-player audio {
+            width: 100%;
+            max-width: 800px;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        /* Hiệu ứng động */
+        @keyframes glow {
+
+            0%,
+            100% {
+                box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+            }
+
+            50% {
+                box-shadow: 0 0 20px rgba(255, 255, 255, 1);
+            }
+        }
+
+        .music-item:hover img {
+            animation: glow 1s infinite;
         }
     </style>
 </head>
+
 <body>
-  <div class="sidebar">
-    <ul>
-      <li> <a href="../page/home.html"> Trang chủ</a> </li>
-      <li><a href="../page/topnhac.html">Top Nhạc</a></li>
-      <li> <a href="../page/casi.html">Ca sĩ</a></li>
-      <li> <a href="../page/toplist.html">Top List</a> </li>
-      <li> <a href ="../page/login.html">Đăng nhập </a></li>
-  </ul>
-  </div>
+
     <header>
-        <h1>Top Music</h1>
-        <p>Your favorite hits, all in one place</p>
+        🌟 Top Music 🌟
     </header>
-
-
-    <div class="container">
-        <ul id="song-list">
-            <!-- Song items will be injected here by JavaScript -->
+    <div class="sidebar">
+        <ul>
+            <li> <a href="../page/home.html"> Trang chủ</a> </li>
+            <li><a href="../page/topnhac.html">Top Nhạc</a></li>
+            <li> <a href="../page/casi.html">Ca sĩ</a></li>
+            <li> <a href="../page/toplist.html">Top List</a> </li>
+            <li> <a href="../page/login.html">Đăng nhập </a></li>
         </ul>
+    </div>
+    <div class="container">
+        <ul class="music-list" id="musicList">
+            <!-- Danh sách bài hát sẽ được thêm bằng JS -->
+        </ul>
+    </div>
 
-
+    <div class="audio-player" id="audioPlayer" style="display: none;">
+        <audio controls id="audio"></audio>
+    </div>
 
     <script>
+<<<<<<< HEAD
+        const musicData = [
+            {
+                title: "Hãy Trao Cho Anh",
+                artist: "Sơn Tùng M-TP",
+                album: "Hãy Trao Cho Anh",
+                thumbnail: "https://nld.mediacdn.vn/2019/7/2/635k-view-premiere-15620590708781264015848.jpg",
+                src: " "
+            },
+            {
+                title: "Nàng Thơ",
+                artist: "Hoàng Dũng",
+                album: "Nàng Thơ",
+                thumbnail: "https://i.scdn.co/image/ab67616d0000b273c8e1db773a282546b2a57fd9",
+                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3"
+            },
+            {
+                title: "Em Của Ngày Hôm Qua",
+                artist: "Sơn Tùng M-TP",
+                album: "Em Của Ngày Hôm Qua",
+                thumbnail: "https://i.ytimg.com/vi/kebCY6ahbHQ/sddefault.jpg",
+                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+            },
+            {
+                title: "Quân Tử ý",
+                artist: "Lê Bảo Bình ",
+                album: "Quân Tử Ý ",
+                thumbnail: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaIGUaC_nW85t3i0kVvxokadK3kDEqp7x9Ug&s",
+                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+            },
+            {
+                title: "Tết Nhà Mình  ",
+                artist: "Hòa Minzy",
+                album: "Tết Nhà MÌnh",
+                thumbnail: "https://thanhnien.mediacdn.vn/uploaded/caotung/2021_01_26/img_6827_WVZY.jpg?width=500",
+                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+            },
+            {
+                title: "E Là Không Thể ",
+                artist: "Anh Quân Idol", album: "E Là Không Thể",
+                thumbnail: "https://photo-resize-zmp3.zmdcdn.me/w240_r1x1_jpeg/cover/6/6/f/c/66fcec5071712b11f5040fa6bb4f64bb.jpg",
+                src: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-3.mp3"
+            }
+            // Thêm các bài hát khác ở đây
+=======
         const songs = [
             { title: "Tái Sinh", artist: "Tùng Dương", thumbnail: "https://i.ytimg.com/vi/aocSFqtnzMk/hqdefault.jpg?sqp=-oaymwEyCNACELwBSFryq4qpAyQIARUAAIhCGAHwAQH4Af4JgALQBYoCDQgAEAEYjAEgUigVMA8=&rs=AOn4CLDg6P851pbr8825rQl4LqvzO2krlA" },
             { title: "Mất Kết Nối", artist: "Dương Domic", thumbnail: "https://via.placeholder.com/60" },
@@ -126,29 +220,43 @@
             { title: "Hận đời ", artist: "Phạm Chí Đức ", thumbnail: "https://via.placeholder.com00/60" },
             { title: "duyt moe thang duc", artist: "to Công", thumbnail: "https://via.placeholder.com/60" }
 
+>>>>>>> 6340b735c5fe7e4667f0b914375847b39f9d2cac
         ];
 
-        const songList = document.getElementById('song-list');
+        const musicList = document.getElementById("musicList");
+        const audioPlayer = document.getElementById("audioPlayer");
+        const audio = document.getElementById("audio");
 
-        songs.forEach((song, index) => {
-            const li = document.createElement('li');
+        function loadMusicList() {
+            musicData.forEach((song, index) => {
+                const listItem = document.createElement("li");
+                listItem.className = "music-item";
 
-            li.innerHTML = `
-                <span class="song-index">${index + 1}</span>
-                <img src="${song.thumbnail}" alt="Song Thumbnail">
-                <div class="song-info">
-                    <h3>${song.title}</h3>
-                    <p>${song.artist}</p>
+                listItem.innerHTML = `
+                <div class="music-info">
+                    <img src="${song.thumbnail}" alt="${song.title}">
+                    <div class="music-details">
+                        <span>${index + 1}. ${song.title}</span>
+                        <span>${song.artist}</span>
+                        <span>${song.album}</span>
+                    </div>
                 </div>
-                <button class="play-btn" onclick="playSong('${song.title}')">Play</button>
+                <button class="play-btn" onclick="playMusic(${index})">Play</button>
             `;
-
-            songList.appendChild(li);
-        });
-
-        function playSong(title) {
-            alert(`Now playing: ${title}`);
+                musicList.appendChild(listItem);
+            });
         }
+
+        function playMusic(index) {
+            const song = musicData[index];
+            audio.src = song.src;
+            audioPlayer.style.display = "flex";
+            audio.play();
+        }
+
+        loadMusicList();
     </script>
+
 </body>
+
 </html>
