@@ -1,22 +1,89 @@
-<!DOCTYPE html>
-<html lang="vi">
-
+xóa cái tìm kiếm đi<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Team</title>
-  <link rel="stylesheet" href="../css/style.css">
-
-
-  <i class="fa-solid fa-music"></i>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>My Team</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            overflow-x: hidden;
+             header {
+            background: linear-gradient(90deg, #6a00ff, #ff0077);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-around;
+            margin-top: 80px;
+        }
+        .singer {
+            width: 200px;
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, background 0.3s ease;
+            text-align: center;
+        }
+        .singer:hover {
+            transform: scale(1.1);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .singer img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .singer h3 {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #ffebcd;
+        }
+        footer {
+            text-align: center;
+            padding: 0.5rem 0;
+            background: #ff6c60;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @keyframes colorCycle {
+            0% { background-color: #ff6c60; }
+            25% { background-color: #ff758c; }
+            50% { background-color: #ff7eb3; }
+            75% { background-color: #ff758c; }
+            100% { background-color: #ff6c60; }
+        }
+        header, footer {
+            animation: colorCycle 10s infinite;
+        }
+    </style>
+</head>
 <body>
-  <div class="header">
-    <img src="youtube-logo.png" alt="YouTube Logo">
-    <div class="search-bar">
-      <input type="text" placeholder="Tìm kiếm">
-      <button>Tìm kiếm</button>
-    </div>
+  <div class="sidebar">
+    <ul>
+      <li> <a href="../page/home.html"> Trang chủ</a> </li>
+      <li><a href="../page/topnhac.html">Top Nhạc</a></li>
+      <li> <a href="../page/casi.html">Ca sĩ</a></li>
+      <li> <a href="../page/toplist.html">Top List</a> </li>
+  </ul>
   </div>
 
   <div class="sidebar">
@@ -28,80 +95,46 @@
       <li> <a href ="../page/login.html">Đăng nhập </a></li>
   </ul>
   </div>
-  <div class="content">
-    <div class="video">
-      <a href="https://youtu.be/aocSFqtnzMk">
-        <img
-          src="https://i.ytimg.com/vi/aocSFqtnzMk/hqdefault.jpg?sqp=-oaymwEyCNACELwBSFryq4qpAyQIARUAAIhCGAHwAQH4Af4JgALQBYoCDQgAEAEYjAEgUigVMA8=&rs=AOn4CLDg6P851pbr8825rQl4LqvzO2krlA"
-          alt="Video 1">
-      </a>
-      <div class="details">
-        <h3>LƯỚT TRÊN CON SÓNG - Dangrangto rủ Trần Lả Lướt kill con beat disco | Rap Việt 2024 [Performance]</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/0LImBM9GQJc">
-        <img
-          src="https://i.ytimg.com/vi/0LImBM9GQJc/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLAMIHIPoupq9jFOoPrmDCKUyknpag"
-          alt="Video 2">
-      </a>
-      <div class="details">
-        <h3>Bước Qua Mùa Cô Đơn, Vùng Ký Ức, Lạ Lùng - Những Ca Khúc Hay Nhất Của VŨ. & CHILLIES</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/Z3UN7pG02NQ">
-        <img
-          src="https://i.ytimg.com/vi/Z3UN7pG02NQ/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLD6nh6pi1LZ3n7p5JPiSjkdvku8hQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>Thằng Điên, 2AM, Vì Anh Đâu Có Biết, Lạ Lùng - Nhạc Ballad Việt Nhẹ Nhàng Gây Nghiện</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/pOoJ1eQbxug">
-        <img
-          src="https://i.ytimg.com/vi/pOoJ1eQbxug/hqdefault.jpg?sqp=-oaymwEnCOADEI4CSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCMBLxqR9be6jkoqMQkjLxHyHZZ4w"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>CHỊU CÁCH MÌNH NÓI THUA ( PIANO COVER ) | RHYDER ft. BAN x COOLKID | HOÀNG GREEN | PIANO VERSION</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/xypzmu5mMPY">
-        <img
-          src="https://i.ytimg.com/vi/xypzmu5mMPY/hq720.jpg?sqp=-oaymwEnCNAFEJQDSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLA9OHY7xqIKzlDOOw5k0iXdeRu6yQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>SƠN TÙNG M-TP | MUỘN RỒI MÀ SAO CÒN | OFFICIAL MUSIC VIDEO</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/jk7LbXUpmz0">
-        <img
-          src="https://i.ytimg.com/vi/jk7LbXUpmz0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDsVRrT50wxMSTViWIMACugXqR0fg"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>STREAM ĐẾN BAO GIỜ - ĐỘ MIXI ft. BẠN SÁNG TÁC | OFFICIAL MUSIC VIDEO</h3>
-      </div>
-    </div>
-    <div class="video">
-      <a href="https://youtu.be/Jk38OqdAQxc">
-        <img
-          src="https://i.ytimg.com/vi/Jk38OqdAQxc/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLBjqnrn_uBjp4vKoHQHWYKmbzn0bQ"
-          alt="Video 3">
-      </a>
-      <div class="details">
-        <h3>ĐỘ TỘC 2 | FROM MIXI WITH LOVE - MASEW x PHÚC DU x PHÁO x ĐỘ MIXI [OFFICIAL MV LYRIC]</h3>
-      </div>
-    </div>
+    <header id="banner">
+        <h1>Danh Sách Các Ca Sĩ Nổi Bật</h1>
+    </header>
+    <main>
+        <div class="singer">
+            <img src="https://nld.mediacdn.vn/2017/9-2-1487125412415.jpg" alt="Ca sĩ 3">
+        <h3>Sơn Tùng MTP</h3>
+        <p>Nguyễn Thanh Tùng, thường được biết đến với nghệ danh Sơn Tùng M-TP, là một nam ca sĩ kiêm sáng tác nhạc, nhà sản xuất thu âm, rapper và diễn viên người Việt Nam.</p>
+        </div>
+        <div class="singer">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuu7Pua5A51BHXvwOWIVruPeUMcuk9-tHQ9A&s" alt="Ca sĩ 4">
+        <h3>Jack–J97</h3>
+        <p>Trịnh Trần Phương Tuấn, thường được biết đến với nghệ danh Jack – J97, là một nam ca sĩ kiêm sáng tác nhạc, rapper, diễn viên người Việt Nam. Jack – J97 bắt đầu được biết đến khi hoạt động trong nhóm nhạc G5R và phát hành bài hát "Hồng nhan".</p>
+        </div>
+        <div class="singer">
+            <img src="data:image/jpeg;base64,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" alt="Ca sĩ 3">
+            <h3>Phan Mạnh Quỳnh</h3>
+            <p>Phan Mạnh Quỳnh là một nam ca sĩ kiêm sáng tác nhạc người Việt Nam. Anh giành được một đề cử Cống hiến cho bài "Huyền thoại" năm 2019.</p>
+        </div>
+        <div class="singer">
+            <img src="data:image/jpeg;base64,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" alt="Ca sĩ 4">
+            <h3>Đen</h3>
+            <p>Nguyễn Đức Cường, thường được biết đến với nghệ danh Đen hay Đen Vâu, là một nam rapper, nhạc sĩ và người dẫn chương trình người Việt Nam. Đen Vâu là "một trong số ít nghệ sĩ thành công từ làn sóng underground và âm nhạc indie" của Việt Nam.</p>
+        </div>
+    </main>
 
 
-  </div>
+    <script>
+        let prevScrollpos = window.pageYOffset;
+        const banner = document.getElementById("banner");
+
+        window.onscroll = function() {
+            let currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                banner.style.top = "0";
+            } else {
+                banner.style.top = "-80px";
+            }
+            prevScrollpos = currentScrollPos;
+        };
+    </script>
 </body>
-
 </html>
